@@ -33,5 +33,5 @@ function getRandomIntInclusive(minH, maxH) {
 }
 
 for (let i = 0; i <= numberOfMountains; i++) {
-  console.log(root(i));
+  console.log(root(getRandomIntInclusive(minН, maxH), i));
 }
