@@ -2,6 +2,8 @@ const userNumber = parseFloat(prompt('MountainH1'));
 
 function numberDrawHight(count) {
   let sum = '';
+  let randomDiamond = Math.floor(Math.random() * 100);
+  sum = randomDiamond > 80 ? '◆' : '#';
   for (let i = 0; i < count; i++) {
     sum += '#';
   }
@@ -59,7 +61,7 @@ function drawMountain(count) {
 }
 
 function drawMountainRandom(count) {
-  generateMountain(count, true)
+  generateMountain(count)
     .slice(0, getRandomIntInclusive(minН, maxH))
     .forEach((item) => {
       console.log(item);
