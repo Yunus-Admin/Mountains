@@ -2,10 +2,10 @@ const userNumber = parseFloat(prompt('MountainH1'));
 
 function numberDrawHight(count) {
   let sum = '';
-  let randomDiamond = Math.floor(Math.random() * 100);
-  sum = randomDiamond > 80 ? '◆' : '#';
+
   for (let i = 0; i < count; i++) {
-    sum += '#';
+    const randomDiamond = Math.floor(Math.random() * 100);
+    sum += randomDiamond < 30 ? '◆' : '#';
   }
   return sum;
 }
@@ -23,7 +23,7 @@ function getRandomIntInclusive(min, max) {
 function generateMountain(count) {
   const resultNumberDrawHight = [];
   function addSymbol(normalString) {
-    const mods = ['=', '-*', '===@', ']-+', '◆'];
+    const mods = ['=', '-*', '===@', ']-+'];
     const modPosition = getRandomIntInclusive(0, mods.length - 1);
     const mod = mods[modPosition];
 
